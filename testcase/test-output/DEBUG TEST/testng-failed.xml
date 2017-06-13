@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DEBUG TEST]">
+	<listeners>
+		<listener class-name="swiftpass.testcase.FailTakeScreenshotListener" />
+		<listener class-name="swiftpass.report.XReporter" />
+	</listeners>
+	<test name="debug(failed)">
+		<classes>
+			<class name="swiftpass.testcase.runners.MerchantTestCaseRunner">
+				<methods>
+					<include name="refresh" />
+					<include name="initProcess" />
+				</methods>
+			</class> <!-- swiftpass.testcase.runners.MerchantTestCaseRunner -->
+			<class name="swiftpass.testcase.RunCaseProcessor">
+				<methods>
+					<include name="postTestProcess" />
+					<include name="preTestProcess" />
+				</methods>
+			</class> <!-- swiftpass.testcase.RunCaseProcessor -->
+			<class name="swiftpass.testcase.runners.DepartmentTestCaseRunner">
+				<methods>
+					<include name="selectMenu" />
+					<include name="initProcess" />
+				</methods>
+			</class> <!-- swiftpass.testcase.runners.DepartmentTestCaseRunner -->
+			<class name="swiftpass.testcase.runners.EmpTestCaseRunner">
+				<methods>
+					<include name="refresh" />
+					<include name="loadingTestPage" />
+					<include name="runAdd" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16" />
+					<include name="runSearch" invocation-numbers="6" />
+					<include name="initProcess" />
+				</methods>
+			</class> <!-- swiftpass.testcase.runners.EmpTestCaseRunner -->
+		</classes>
+	</test> <!-- debug(failed) -->
+</suite> <!-- Failed suite [DEBUG TEST] -->

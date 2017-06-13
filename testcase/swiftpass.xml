@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="swiftpass">
+
+	<!-- <test name="Login"> <classes> <class name="swiftpass.testcase.runners.LoginTestCaseRunner"/> 
+		</classes> </test> -->
+
+	<test name="NonLogin">
+		<classes>
+			<class name="swiftpass.testcase.RunCaseProcessor" />
+			<class name="swiftpass.testcase.runners.MerchantTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runEdit"></include>
+					<include name="runAudit"></include>
+					<include name="runActive"></include>
+					<include name="runAAA"></include>
+					<include name="runDetail"></include>
+					<include name="runSearch"></include>
+					<include name="runAddPC"></include>
+					<include name="runEditPC"></include>
+					<include name="runActivePC"></include>
+					<include name="runDetailPC"></include>
+				</methods>
+			 </class>
+			<class name="swiftpass.testcase.runners.ChannelTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runEdit"></include>
+					<include name="runAudit"></include>
+					<include name="runActive"></include>
+					<include name="runAAA"></include>
+					<include name="runScanDetail"></include>
+					<include name="runSearch"></include>
+					<include name="runPCAdd"></include>
+					<include name="runPCEdit"></include>
+					<include name="runPCActive"></include>
+					<include name="runPCDetail"></include>
+				</methods>
+			</class> 
+			<class name="swiftpass.testcase.runners.EmpTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runEdit"></include>
+					<include name="runSearch"></include>
+				</methods>
+			</class>
+
+			<class name="swiftpass.testcase.runners.DepartmentTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runEdit"></include>
+					<include name="runSearch"></include>
+				</methods>
+			</class>
+			<class name="swiftpass.testcase.runners.StoreTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runEdit"></include>
+					<include name="runScanDetail"></include>
+					<include name="runScanQRCode"></include>
+					<include name="runSearch"></include>
+				</methods>
+			</class>
+			<class name="swiftpass.testcase.runners.TaskListTestCaseRunner">
+				<methods>
+					<include name="runAddTask"></include>
+					<include name="runRunTask"></include>
+					<include name="runStartOrShutdownTask"></include>
+					<include name="runResetRunStatus"></include>
+					<include name="runSearchTask"></include>
+				</methods>
+			</class>
+	<!-- 	<class name="swiftpass.testcase.runners.BasisMaterialTestCaseRunner"/> -->
+		</classes> 
+	</test> 
+	<listeners>
+		<listener class-name="swiftpass.testcase.FailTakeScreenshotListener" />
+		<listener class-name="swiftpass.report.XReporter" />
+	</listeners>
+</suite> <!-- Suite -->

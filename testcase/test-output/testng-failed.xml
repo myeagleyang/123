@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Failed suite [swiftpass]]">
+  <listeners>
+    <listener class-name="swiftpass.testcase.FailTakeScreenshotListener"/>
+    <listener class-name="swiftpass.report.XReporter"/>
+  </listeners>
+  <test name="NonLogin(failed)(failed)">
+    <classes>
+      <class name="swiftpass.testcase.runners.ChannelTestCaseRunner">
+        <methods>
+          <include name="runEdit"/>
+          <include name="runScanDetail"/>
+          <include name="refresh"/>
+          <include name="initProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.ChannelTestCaseRunner -->
+      <class name="swiftpass.testcase.runners.MerchantTestCaseRunner">
+        <methods>
+          <include name="runDetail"/>
+          <include name="runActivePC"/>
+          <include name="refresh"/>
+          <include name="runAAA"/>
+          <include name="runAdd"/>
+          <include name="initProcess"/>
+          <include name="runSearch"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.MerchantTestCaseRunner -->
+      <class name="swiftpass.testcase.RunCaseProcessor">
+        <methods>
+          <include name="postTestProcess"/>
+          <include name="preTestProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.RunCaseProcessor -->
+    </classes>
+  </test> <!-- NonLogin(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [swiftpass]] -->

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [swiftpass]">
+  <listeners>
+    <listener class-name="swiftpass.testcase.FailTakeScreenshotListener"/>
+    <listener class-name="swiftpass.report.XReporter"/>
+  </listeners>
+  <test name="NonLogin(failed)">
+    <classes>
+      <class name="swiftpass.testcase.runners.EmpTestCaseRunner">
+        <methods>
+          <include name="refresh"/>
+          <include name="loadingTestPage"/>
+         <!--  <include name="runAdd" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16"/> -->
+          <include name="runSearch" invocation-numbers="6"/>
+          <include name="initProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.EmpTestCaseRunner -->
+      <class name="swiftpass.testcase.runners.StoreTestCaseRunner">
+        <methods>
+          <include name="refresh"/>
+          <include name="loadingTestPage"/>
+          <include name="initProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.StoreTestCaseRunner -->
+      <class name="swiftpass.testcase.runners.MerchantTestCaseRunner">
+        <methods>
+          <include name="runDetail" invocation-numbers="d1"/>
+          <include name="runActivePC" invocation-numbers="22"/>
+          <include name="refresh"/>
+          <include name="runAAA" invocation-numbers="205 206"/>
+          <include name="runAdd" invocation-numbers="29 42"/>
+          <include name="initProcess"/>
+          <include name="runSearch" invocation-numbers="2 3 10 17"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.MerchantTestCaseRunner -->
+      <class name="swiftpass.testcase.runners.ChannelTestCaseRunner">
+        <methods>
+          <include name="runEdit" invocation-numbers="3"/>
+          <include name="runScanDetail" invocation-numbers="0"/>
+          <include name="refresh"/>
+          <include name="runPCActive" invocation-numbers="8"/>
+          <include name="initProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.ChannelTestCaseRunner -->
+      <class name="swiftpass.testcase.runners.DepartTestCaseRunner">
+        <methods>
+          <include name="refresh"/>
+          <include name="initProcess"/>
+          <include name="loadingTestPage"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.DepartTestCaseRunner -->
+      <class name="swiftpass.testcase.runners.TaskListTestCaseRunner">
+        <methods>
+          <include name="runRunTask" invocation-numbers="2"/>
+          <include name="refresh"/>
+          <include name="initProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.runners.TaskListTestCaseRunner -->
+      <class name="swiftpass.testcase.RunCaseProcessor">
+        <methods>
+          <include name="postTestProcess"/>
+          <include name="preTestProcess"/>
+        </methods>
+      </class> <!-- swiftpass.testcase.RunCaseProcessor -->
+    </classes>
+  </test> <!-- NonLogin(failed) -->
+</suite> <!-- Failed suite [swiftpass] -->

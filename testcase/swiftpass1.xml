@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="swiftpass">
+
+	<!-- <test name="Login"> <classes> <class name="swiftpass.testcase.runners.LoginTestCaseRunner"/> 
+		</classes> </test> -->
+
+	<test name="NonLogin">
+		<classes>
+			<class name="swiftpass.testcase.RunCaseProcessor" />
+			<class name="swiftpass.testcase.runners.MerchantTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runSearch"></include>
+					<include name="runAddPC"></include>
+				</methods>
+			</class>
+			<class name="swiftpass.testcase.runners.ChannelTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runSearch"></include>
+					<include name="runPCAdd"></include>
+				</methods>
+			</class>
+			<class name="swiftpass.testcase.runners.EmpTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runSearch"></include>
+				</methods>
+			</class>
+
+			<class name="swiftpass.testcase.runners.DepartTestCaseRunner">
+				<methods>
+					<include name="runAddDepart"></include>
+					<include name="runSearchDepart"></include>
+				</methods>
+			</class>
+			<class name="swiftpass.testcase.runners.StoreTestCaseRunner">
+				<methods>
+					<include name="runAdd"></include>
+					<include name="runSearch"></include>
+				</methods>
+			</class>
+			<class name="swiftpass.testcase.runners.TaskListTestCaseRunner">
+				<methods>
+					<include name="runAddTask"></include>
+					<include name="runRunTask"></include>
+					<include name="runStartOrShutdownTask"></include>
+					<include name="runResetRunStatus"></include>
+					<include name="runSearchTask"></include>
+				</methods>
+			</class>
+			<!-- <class name="swiftpass.testcase.runners.BasisMaterialTestCaseRunner"/> -->
+		</classes>
+	</test> <!-- Test -->
+	<listeners>
+		<listener class-name="swiftpass.testcase.FailTakeScreenshotListener" />
+		<listener class-name="swiftpass.report.XReporter" />
+	</listeners>
+</suite> <!-- Suite -->

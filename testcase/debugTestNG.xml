@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DEBUG TEST">
+	<test name="debug">
+		<classes>
+			<class name="swiftpass.testcase.RunCaseProcessor" />
+				<!--<class name="swiftpass.testcase.runners.ChannelTestCaseRunner">
+				<methods>
+				 <include name="runAAA" />
+					<include name="runAdd"/> 
+					<include name="runAddD0"/> 
+					<include name="runEdit"/> 
+					<include name="runAudit"/>
+					<include name="runActive"/>
+					<include name="runScanDetail"/> 
+					<include name="runSearch"/> 
+					<include name="runPCAdd"/>
+					<include name="runPCActive"/> 
+				</methods>
+			</class>-->
+			<!-- <class name="swiftpass.testcase.runners.MerchantTestCaseRunner"> 
+				<methods>
+				 <include name="runAdd"/> 
+				<include name="runEdit"/> 
+				<include name="runAudit"/> 
+				<include name="runActive"/>
+				 <include name="runAAA"/> 
+				 <include name="runSearch"/> 
+				<include name="runDetail"/> 
+				</methods> </class> -->
+				
+			<!-- <class name="swiftpass.testcase.runners.DepartmentTestCaseRunner"> 
+				<methods> 
+				<include name="runAdd"/> 
+				<include name="runSearch"/> 
+				<include name="runEdit"/> 
+				</methods> </class> -->
+				
+			<!-- 	<class name="swiftpass.testcase.runners.EmpTestCaseRunner"> <methods> 
+				<include name="runAdd"/> 
+				<include name="runSearch"/>
+				 <include name="runEdit"/> 
+				</methods> 
+				</class>  -->
+				
+				
+				 <class name="irsy.testcase.runners.FinanceCooperateTestCaseRunner"> 
+				<methods> 
+				<include name="runAdd"/> 
+				<!-- <include name="runSearch"/> 
+				<include name="runEdit"/>  -->
+				</methods> </class> 
+				
+			<!-- <class name="swiftpass.testcase.runners.BasisExportTestCaseRunner"> 
+				<methods> 
+				<include name="runSearch"/> 
+				<include name="runExportBasis"/> 
+				<include name="runExportBasisByMchIds"/> 
+				<include name="runDownload"/> 
+				</methods> 
+				</class> 
+				<class name="swiftpass.testcase.runners.BasisImportTestCaseRunner"> 
+				<methods> 
+				<include name="runSearch"/>
+				 <include name="runUpload"/>
+				  <include name="runDetail"/> 
+				  </methods> </class> -->
+				  
+				  
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="swiftpass.testcase.FailTakeScreenshotListener" />
+		<listener class-name="swiftpass.report.XReporter" />
+	</listeners>
+</suite>
